@@ -1,0 +1,452 @@
+/*
+Theme Name: ○○○○
+*/
+
+/* .sigle_pagelist */
+.sigle_pagelist {
+  margin: 0 auto;
+  width: 550px;
+  padding: 40px 0;
+}
+
+.sigle_pagelist:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.sigle_pagelist li.prev,
+.sigle_pagelist li.next {
+  width: 150px;
+  display: flex;
+}
+
+.sigle_pagelist li.prev {
+  float: left;
+  justify-content: flex-start;
+}
+
+.sigle_pagelist li.next {
+  float: right;
+  justify-content: flex-end;
+}
+
+.sigle_pagelist li.prev a,
+.sigle_pagelist li.next a {
+  color: #362e2b;
+  text-decoration: none;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 13px 0 12px;
+  min-height: 52px;
+  font-size: 1.4rem;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.sigle_pagelist li.prev a {
+  flex-direction: row-reverse;
+}
+
+.sigle_pagelist li.next a {
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.sigle_pagelist li.prev .arrow-left,
+.sigle_pagelist li.next .arrow-right {
+  height: 1px;
+  width: 16px;
+  background: #282828;
+  position: relative;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.sigle_pagelist li.prev .arrow-left {
+  margin-right: 20px;
+}
+
+.sigle_pagelist li.next .arrow-right {
+  margin-left: 20px;
+}
+
+.sigle_pagelist li.prev .arrow-left:before,
+.sigle_pagelist li.next .arrow-right:before {
+  top: -5px;
+  width: 10px;
+  height: 10px;
+  content: "";
+  position: absolute;
+  border-top: solid 1px #282828;
+  border-right: solid 1px #282828;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.sigle_pagelist li.prev .arrow-left:before {
+  left: 1px;
+  -webkit-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+
+.sigle_pagelist li.next .arrow-right:before {
+  right: 1px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.sigle_pagelist li.prev a:hover,
+.sigle_pagelist li.next a:hover {
+  color: #1d6ead;
+}
+
+.sigle_pagelist li.prev a:hover .arrow-left,
+.sigle_pagelist li.next a:hover .arrow-right {
+  background: #1d6ead;
+}
+
+.sigle_pagelist li.prev a:hover .arrow-left:before,
+.sigle_pagelist li.next a:hover .arrow-right:before {
+  border-top: solid 1px #1d6ead;
+  border-right: solid 1px #1d6ead;
+}
+
+.sigle_pagelist li.tolist:only-child {
+  margin: 0 auto;
+  display: table;
+}
+
+.sigle_pagelist li.prev + .tolist {
+  float: left;
+}
+
+.sigle_pagelist li.next + .tolist {
+  float: right;
+}
+
+.sigle_pagelist li.tolist a {
+  padding: 11px 40px 13px;
+  line-height: 1;
+  width: 250px;
+  min-height: 52px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  align-items: center;
+  background: #1e3f6b;
+  display: flex;
+  text-decoration: none;
+  color: #fff;
+  position: relative;
+}
+
+.sigle_pagelist li.tolist a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.3);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.sigle_pagelist li.tolist a:hover::after {
+  opacity: 1;
+}
+
+@media (max-width: 480px) {
+  .sigle_pagelist {
+    width: 100%;
+    padding: 20px 10px;
+  }
+
+  .sigle_pagelist li.prev,
+  .sigle_pagelist li.next {
+    width: 15%;
+  }
+
+  .sigle_pagelist li.prev a,
+  .sigle_pagelist li.next a {
+    -webkit-transition: none;
+    transition: none;
+    min-height: 45px;
+    padding: 0;
+    position: relative;
+  }
+
+  .sigle_pagelist li.prev a::after,
+  .sigle_pagelist li.next a::after {
+    content: "\3000";
+  }
+
+  .sigle_pagelist li.prev .text,
+  .sigle_pagelist li.next .text {
+    display: none;
+  }
+
+  .sigle_pagelist li.prev .arrow-left,
+  .sigle_pagelist li.next .arrow-right {
+    -webkit-transition: none;
+    transition: none;
+    position: absolute;
+    top: 50%;
+  }
+
+  .sigle_pagelist li.prev .arrow-left {
+    margin-right: 0;
+  }
+
+  .sigle_pagelist li.prev .arrow-left:before,
+  .sigle_pagelist li.next .arrow-right:before {
+    -webkit-transition: none;
+    transition: none;
+  }
+
+  .sigle_pagelist li.prev a:hover,
+  .sigle_pagelist li.next a:hover {
+    color: #362e2b;
+  }
+
+  .sigle_pagelist li.prev a:hover .arrow-left,
+  .sigle_pagelist li.next a:hover .arrow-right {
+    background: #362e2b;
+  }
+
+  .sigle_pagelist li.prev a:hover .arrow-left:before,
+  .sigle_pagelist li.next a:hover .arrow-right:before {
+    border-top: solid 1px #362e2b;
+    border-right: solid 1px #362e2b;
+  }
+
+  .sigle_pagelist li.tolist {
+    width: 70%;
+  }
+
+  .sigle_pagelist li.tolist a {
+    min-height: 45px;
+    width: 100%;
+  }
+
+  .sigle_pagelist li.tolist a::after {
+    content: none;
+  }
+}
+
+/* .archive_pagelist */
+.archive_pagelist {
+  width: 550px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.archive_pagelist:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.archive_pagelist li:not(.pagelist) {
+  width: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 41px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.archive_pagelist li:not(.pagelist) a {
+  text-decoration: none;
+  color: #1e3f6b;
+  position: relative;
+}
+
+.archive_pagelist li:not(.pagelist) a::after {
+  content: " ";
+  width: 0;
+  height: 0;
+  position: absolute;
+  border: 8px solid transparent;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.archive_pagelist li:not(.pagelist) a:hover {
+  text-decoration: underline;
+  color: #1d6ead;
+}
+
+.archive_pagelist li.prev {
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  float: left;
+}
+
+.archive_pagelist li.prev a {
+  padding-left: 30px;
+}
+
+.archive_pagelist li.prev a::after {
+  border-right: 15px solid #1e3f6b;
+  left: -5px;
+}
+
+.archive_pagelist li.next {
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  float: right;
+}
+
+.archive_pagelist li.next a {
+  padding-right: 30px;
+}
+
+.archive_pagelist li.next a::after {
+  border-left: 15px solid #1e3f6b;
+  right: -5px;
+}
+
+.archive_pagelist li.prev a:hover::after {
+  border-right-color: #1d6ead;
+}
+
+.archive_pagelist li.next a:hover::after {
+  border-left-color: #1d6ead;
+}
+
+.archive_pagelist li.pagelist {
+  width: 350px;
+  text-align: center;
+}
+
+.archive_pagelist li.pagelist:only-child {
+  margin: 0 auto;
+}
+
+.archive_pagelist li.pagelist > a,
+.archive_pagelist li.pagelist > span {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  vertical-align: top;
+  height: 41px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-decoration: none;
+  line-height: 1;
+}
+
+.archive_pagelist li.pagelist > a,
+.archive_pagelist li.pagelist > span.current {
+  border: 1px solid #ccc;
+  padding: 0 10px;
+}
+
+.archive_pagelist li.pagelist > a {
+  background: #fff;
+  color: #1e3f6b;
+}
+
+.archive_pagelist li.pagelist > a:hover {
+  background: #1d6ead;
+  color: #fff;
+}
+
+.archive_pagelist li.pagelist > span.current {
+  background: #1e3f6b;
+  color: #fff;
+}
+
+.archive_pagelist li.pagelist > span:not(:last-child),
+.archive_pagelist li.pagelist > a:not(:last-child) {
+  margin-right: 5px;
+}
+
+.archive_pagelist li.prev + .pagelist {
+  float: left;
+}
+
+.archive_pagelist li.next + .pagelist {
+  float: right;
+}
+
+@media (max-width: 480px) {
+  .archive_pagelist {
+    width: 100%;
+    padding: 20px 10px;
+  }
+
+  .archive_pagelist li:not(.pagelist) {
+    width: 10%;
+    height: 45px;
+  }
+
+  .archive_pagelist li:not(.pagelist) span {
+    display: none;
+  }
+
+  .archive_pagelist li:not(.pagelist) a:hover {
+    text-decoration: none;
+    color: #1e3f6b;
+  }
+
+  .archive_pagelist li.prev a:hover::after {
+    border-right-color: #1e3f6b;
+  }
+
+  .archive_pagelist li.next a:hover::after {
+    border-left-color: #1e3f6b;
+  }
+
+  .archive_pagelist li.pagelist {
+    width: 80%;
+  }
+
+  .archive_pagelist li.pagelist > a,
+  .archive_pagelist li.pagelist > span {
+    height: 45px;
+  }
+
+  .archive_pagelist li.pagelist > a:hover {
+    background: #fff;
+    color: #1e3f6b;
+  }
+}
+
+/* .nothing_text */
+.nothing_text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  font-size: 1.8rem;
+  padding: 50px 0;
+}
+
+@media (max-width: 480px) {
+  .nothing_text {
+    text-align: left;
+    font-size: 1.5rem;
+    padding: 20px 0;
+  }
+}
