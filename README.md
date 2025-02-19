@@ -111,6 +111,7 @@ https://sachips.byeto.jp/wordpress/custom-taxonomy-checkbox.html
 https://www.conoha.jp/lets-wp/wp-category/  
 https://tomorrowgate.co.jp/blog/2967/  
 https://shu-naka-blog.com/website/custom-post-categories02/  
+https://note.spiqa.design/6360/
 
 ・ページネーション  
 https://recooord.org/wordpress-prevpost-nextpost/  
@@ -140,6 +141,7 @@ https://bge.jp/wordpress-database/
 ・etc  
 https://knowledge.sakura.ad.jp/25847/  
 https://www.vektor-inc.co.jp/post/how-to-use-post-type-switcher/
+https://webty.jp/staffblog/production/post-4809/
 
 
 <!--
